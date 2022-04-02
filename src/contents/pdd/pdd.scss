@@ -1,0 +1,39 @@
+@import '~antd/dist/antd.css';
+.pddroot {
+    position: fixed;
+    width: 600px;
+    background-color: #fff;
+    border: 2px solid red;
+    border-radius: 10px;
+    right: 200px;
+    top: 60px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: flex-start;
+    z-index: 999;
+    .btn-leleyu,
+    .btn-xiaoxiong {
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: 500;
+        border-color: #407cff;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 3px;
+        background-color: #407cff;
+        margin: 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .task-btn:hover {
+        opacity: 0.9;
+        cursor: pointer;
+    }
+}
+.btn-batch {
+    float: right;
+}
+.pdd-button {
+    margin-left: 10px;
+}

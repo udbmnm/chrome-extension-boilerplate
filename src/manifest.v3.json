@@ -1,12 +1,16 @@
 {
-  "name": "Getting Started Example",
+  "name": "多多批量备注助手",
   "description": "Build an Extension!",
-  "version": "1.0",
+  "version": "2.0",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -26,22 +30,14 @@
   "content_scripts": [
     {
       "matches": [
-        "http://*/*",
-        "https://*/*"
-      ],
-      "js": [
-        "js/test.js"
-      ]
-    },
-    {
-      "matches": [
-        "https://github.com/*"
-      ],
-      "js": [
-        "js/github.js"
+        "https://mms.pinduoduo.com/*"
       ],
       "css": [
-        "css/github.css"
+        "css/pdd.css"
+      ],
+      "js": [
+        "js/jquery.js",
+        "js/pdd.js"
       ]
     }
   ]

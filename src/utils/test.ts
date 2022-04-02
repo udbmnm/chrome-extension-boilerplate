@@ -1,3 +1,3 @@
 export const test = () => {
-  console.log('common utils test function');
+  console.log('test utils');
 };

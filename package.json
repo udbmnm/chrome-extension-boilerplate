@@ -17,7 +17,7 @@
   "author": "njzy",
   "license": "MIT",
   "chromeExtension": {
-    "mainifest-version": 2
+    "mainifest-version": 3
   },
   "husky": {
     "hooks": {
@@ -67,9 +67,11 @@
     "less-loader": "^10.0.1",
     "lint-staged": "^11.1.2",
     "mini-css-extract-plugin": "^2.2.0",
+    "node-sass": "^7.0.1",
     "postcss-loader": "^6.1.1",
     "prettier": "^2.3.2",
     "react-refresh": "0.10.0",
+    "sass-loader": "^12.6.0",
     "style-loader": "^3.2.1",
     "terser-webpack-plugin": "^5.1.4",
     "ts-node": "^10.1.0",
@@ -82,6 +84,9 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.14.8",
+    "@types/jquery": "^3.5.14",
+    "antd": "^4.19.3",
+    "jquery": "^3.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

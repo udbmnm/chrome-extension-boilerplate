@@ -44,6 +44,7 @@ const config: Configuration = {
     children: false
   },
   module: {
+    noParse: /jquery/,
     rules: [
       {
         test: /\.m?js$/,
@@ -64,7 +65,7 @@ const config: Configuration = {
         ]
       },
       {
-        test: /\.(le|c)ss$/,
+        test: /\.(le|c|sc)ss$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -74,7 +75,8 @@ const config: Configuration = {
           },
           'css-loader',
           // 'postcss-loader',
-          'less-loader'
+          'sass-loader'
+          // 'less-loader'
         ]
       },
       {
@@ -133,7 +135,11 @@ const config: Configuration = {
           ),
           to: path.resolve(__dirname, '../dist/manifest.json')
         },
-        { from: path.resolve(__dirname, '../src/assets'), to: path.resolve(__dirname, '../dist/images') }
+        { from: path.resolve(__dirname, '../src/assets'), to: path.resolve(__dirname, '../dist/images') },
+        {
+          from: path.resolve(__dirname, '../public/vendor'),
+          to: path.resolve(__dirname, '../dist/js')
+        }
       ]
     }),
     new HtmlWebpackPlugin({
